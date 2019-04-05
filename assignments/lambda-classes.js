@@ -30,6 +30,10 @@ class Instructor extends Person {
   grade(student, subject) {
     return `${student} recieves a perfect score on ${subject}!`;
   }
+
+  //grading() {
+  // function with math.random stuff goes here
+  //}
 }
 
 class Student extends Person {
@@ -38,6 +42,7 @@ class Student extends Person {
     this.previousBackground = studAttr.previousBackground;
     this.className = studAttr.className;
     this.favSubjects = studAttr.favSubjects;
+    this.grade = studAttr.grade;
   }
 
   listsSubjects() {
@@ -112,7 +117,8 @@ const gill = new Student({
   gender: "male",
   previousBackground: "boosted LOL accounts",
   className: "WEBPT5",
-  favSubjects: ["math", "english", "CSS"]
+  favSubjects: ["math", "english", "CSS"],
+  grade: 70
 });
 
 const gillie = new Student({
@@ -122,7 +128,8 @@ const gillie = new Student({
   gender: "female",
   previousBackground: "landscaping",
   className: "WEBPT5",
-  favSubjects: ["athletics", "spanish", "algebra"]
+  favSubjects: ["athletics", "spanish", "algebra"],
+  grade: 70
 });
 
 const ingrid = new ProjectManager({
@@ -179,3 +186,9 @@ console.log(ingrid.debugsCode(gillie.name, "HTML"));
 console.log(maza.location);
 console.log(maza.gradClassName);
 console.log(maza.favInstructor);
+
+//Stretch
+
+console.log(gill.grade)
+console.log(gillie.grade)
+
